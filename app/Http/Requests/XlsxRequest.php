@@ -24,7 +24,7 @@ class XlsxRequest extends FormRequest
     public function rules()
     {
         return [
-            'files' => ['required','mimes:xlsx,xls','max:1024']
+            'files' => ['required','max:1024', 'mimes:xlsx,xls']
         ];
     }
     public function messages()

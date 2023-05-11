@@ -4,6 +4,7 @@ namespace App\Imports;
 
 use App\Models\ZakazUnity;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Validator;
 use Maatwebsite\Excel\Concerns\ToCollection;
 use PhpOffice\PhpSpreadsheet\Shared\Date;
 
@@ -17,7 +18,7 @@ class ZakazUnityImport implements ToCollection
     */
     public function collection(Collection $rows)
     {
-        foreach ($rows as $row){
+       foreach ($rows as $row){
 
         if(preg_match("/[А-Яа-я]/", $row[0]) ){
             continue;

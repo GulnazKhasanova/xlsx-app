@@ -142,9 +142,13 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'files' => [
+            'required' => 'НЕ выбран файл',
+            'mimes'=> 'Формат файла не подходит',
+            'uploaded'=> 'Формат файла не подходит',
+            'max' => 'Размер файла превышает допустимый предел :max',
         ],
+
     ],
 
     /*
